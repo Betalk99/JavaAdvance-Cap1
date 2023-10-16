@@ -4,18 +4,14 @@ public class Main {
     public static void main(String[] args) {
     int x = 6;
 
-    range(x);
+    System.out.print(range(x));
     }
-    public static void range(int x){
-
+    public static boolean range(int x){
         if(!(x < 10 && x >5)){
             throw new ArithmeticException("not in range");
         }else {
-            System.out.print(true);
+            return true;
         }
-
-
-
 
     }
 

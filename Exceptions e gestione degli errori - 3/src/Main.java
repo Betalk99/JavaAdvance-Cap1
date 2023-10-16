@@ -9,7 +9,6 @@ public class Main {
     }
 
     public static void divZero(int num){
-
         try {
                System.out.print("Risultato: " + num/0);
         }catch (Exception e){
