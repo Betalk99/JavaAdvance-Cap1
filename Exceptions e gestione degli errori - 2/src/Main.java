@@ -17,7 +17,6 @@ public class Main {
         if(num >= 48 && num <= 57){
             isaNum = true;
         } else {
-            isaNum = false;
             throw new ArithmeticException("Carattere non valido");
         }
         return isaNum;
