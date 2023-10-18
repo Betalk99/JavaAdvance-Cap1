@@ -24,6 +24,9 @@ public class Main {
 
         forno.clear();
 
+        boolean empty = forno.isEmpty();
+        System.out.println("il forno è vuoto: " + empty);
+
         System.out.println(forno);
     }
     public static Set<String> riempiForno(Set<String> forno){
