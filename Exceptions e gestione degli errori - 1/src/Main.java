@@ -3,11 +3,13 @@
 public class Main {
     public static void main(String[] args) {
     int x = 6;
+    int max = 10;
+    int min = 5;
 
-    System.out.print(range(x));
+    System.out.print(range(x, max, min));
     }
-    public static boolean range(int x){
-        if(!(x < 10 && x >5)){
+    public static boolean range(int x, int max, int min){
+        if(!(x < max && x > min)){
             throw new ArithmeticException("not in range");
         }else {
             return true;
