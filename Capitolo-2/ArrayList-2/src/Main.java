@@ -31,26 +31,25 @@ public class Main {
         array1.add(s11);
         array1.add(s12);
 
-        System.out.println(" \n Array di studenti:  \n ");
-
-        for(Student i : array1){
-            System.out.println(i);
-        }
+        System.out.println("Array di studenti:  \n ");
+        stampaArray(array1);
 
         ordArrayListAge(array1);
-        System.out.println(" \n Array ordinato tramite l'età degli studenti:  \n ");
-        for(Student i : array1){
-            System.out.println(i);
-        }
+        System.out.println("\n Array ordinato tramite l'età degli studenti:  \n ");
+        stampaArray(array1);
 
     }
 
     public static ArrayList<Student> ordArrayListAge(ArrayList<Student> array1){
         array1.sort(Comparator.comparing(Student::getAge));
-
         return array1;
     }
 
+    public static void stampaArray(ArrayList<Student> array1){
+        for(Student i : array1){
+            System.out.println(i);
+        }
+    }
 
 
 }

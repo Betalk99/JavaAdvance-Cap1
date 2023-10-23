@@ -8,8 +8,8 @@ public class Main {
         Studente s3 = new Studente("Antonio", 25);
 
         ArrayList<Studente> array1 = new ArrayList<Studente>(Arrays.asList(s1 ,s2 ,s3)) ;
-
-        System.out.println("array1 " + array1);
+        System.out.println("Array \n ");
+        stampaArray(array1);
 
         Studente s4 = new Studente("Ciao", 27);
         Studente s5 = new Studente("Pippo", 28);
@@ -21,10 +21,14 @@ public class Main {
         array1.add(s6);
         array1.add(s7);
 
-        System.out.println("array1 con aggiunta  ");
+        System.out.println(" \n Array con aggiunta \n ");
+        stampaArray(array1);
+    }
+
+    public static void stampaArray(ArrayList<Studente> array1){
         for(Studente i : array1){
             System.out.println(i);
         }
-
     }
+
 }
