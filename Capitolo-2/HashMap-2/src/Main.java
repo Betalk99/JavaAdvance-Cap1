@@ -3,36 +3,35 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
 
-        Map<String, Integer> map = new HashMap<>();
-        map.put("Alice", 25);
-        map.put("Bob", 30);
-        map.put("Charlie", 22);
-        map.put("David", 35);
-        map.put("Eve", 28);
+        Map<String, Integer> hashMap = new HashMap<>(); //creato hashmap
 
-        System.out.println(map);
+        // Aggiungi coppie chiave-valore
+        hashMap.put("Alice", 25);
+        hashMap.put("Bob", 30);
+        hashMap.put("Charlie", 22);
+        hashMap.put("David", 35);
+        hashMap.put("Eve", 28);
 
-        Set<String> key = map.keySet();
-        Collection<Integer> val = map.values();
+        Set<String> key = hashMap.keySet();  //prendo chiavi in un set
+        Collection<Integer> val = hashMap.values(); //prendo values in una collection
 
-        System.out.println(key);
-        System.out.println(val);
+        System.out.println(key); // stampo solo key
+        System.out.println(val); // stampo solo values
 
-
-        Map<String, Integer> mapOrd = new TreeMap<>(map);
-
-        System.out.println(mapOrd);
-
-
-        for (Map.Entry<String, Integer> entry : mapOrd.entrySet()) {
-            System.out.println(entry.getKey() + ": " + entry.getValue());
+        // Stampa i valori non ordinati
+        System.out.println("Valori non ordinati:");
+        for (Map.Entry<String, Integer> value : hashMap.entrySet()) {
+            System.out.println(value);
         }
 
+        // Crea un TreeMap per ordinare i valori
+        Map<String, Integer> treeMap = new TreeMap<>(hashMap);
 
+        // Stampa i valori ordinati in ordine alfabetico non per la value
+        System.out.println("\nValori ordinati:");
+        for (Map.Entry<String, Integer> a : treeMap.entrySet()) {
+            System.out.println(a);
+        }
 
     }
-
-
-
-
 }
