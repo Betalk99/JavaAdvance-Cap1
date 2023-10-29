@@ -12,26 +12,31 @@ public class Main {
         hashMap.put("David", 35);
         hashMap.put("Eve", 28);
 
-        Set<String> key = hashMap.keySet();  //prendo chiavi in un set
-        Collection<Integer> val = hashMap.values(); //prendo values in una collection
-
-        System.out.println(key); // stampo solo key
-        System.out.println(val); // stampo solo values
 
         // Stampa i valori non ordinati
         System.out.println("Valori non ordinati:");
         for (Map.Entry<String, Integer> value : hashMap.entrySet()) {
             System.out.println(value);
         }
+        List<Map.Entry<String, Integer>> list = new ArrayList<>(hashMap.entrySet());
 
-        // Crea un TreeMap per ordinare i valori
-        Map<String, Integer> treeMap = new TreeMap<>(hashMap);
+        // Ordina la lista in base ai valori
+        Collections.sort(list, new Comparator<Map.Entry<String, Integer>>() {
+            public int compare(Map.Entry<String, Integer> o1, Map.Entry<String, Integer> o2){
+                return o1.getValue().compareTo(o2.getValue());
+            }
+        });
 
-        // Stampa i valori ordinati in ordine alfabetico non per la value
-        System.out.println("\nValori ordinati:");
-        for (Map.Entry<String, Integer> a : treeMap.entrySet()) {
-            System.out.println(a);
+        // Crea una LinkedHashMap per mantenere l'ordine della lista ordinata
+        Map<String, Integer> sortedMap = new LinkedHashMap<>();
+        for (Map.Entry<String, Integer> entry : list) {
+            sortedMap.put(entry.getKey(), entry.getValue());
         }
 
+        // Stampa i valori ordinati in base ai valori
+        System.out.println("Valori ordinati in base ai valori:");
+        for (Map.Entry<String, Integer> entry : sortedMap.entrySet()) {
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+        }
     }
 }
