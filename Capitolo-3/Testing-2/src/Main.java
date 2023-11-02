@@ -1,4 +1,5 @@
 import java.time.OffsetDateTime;
+import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
@@ -6,16 +7,46 @@ import java.time.format.FormatStyle;
 public class Main {
     public static void main(String[] args) {
 
-        ZonedDateTime oggi = OffsetDateTime.parse("2023-03-01T13:00:00Z").toZonedDateTime();
-        System.out.println("Oggi: " + oggi);
+        ZonedDateTime date = OffsetDateTime.parse("2002-03-01T13:00:00Z").atZoneSimilarLocal(ZoneId.of("Europe/Rome"));
+        System.out.println("Data " + date);
 
-        System.out.println(dataFormattata(oggi));
+
+        System.out.println("Date Short : " + dataShor(date));
+
+        System.out.println("Date Medium : " + dataMed(date));
+
+        System.out.println("Date Full : " + dataFul(date));
+
+    }
+
+    public static String dataShor(ZonedDateTime date){
+        if(date == null){
+            return null;
+        }
+        String dateShort = date.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT, FormatStyle.SHORT));
+
+        return dateShort;
+    }
+
+    public static String dataMed(ZonedDateTime date){
+        if(date == null){
+            return null;
+        }
+        String dateMedium = date.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM, FormatStyle.MEDIUM));
+
+        return dateMedium;
+    }
+    public static String dataFul(ZonedDateTime date){
+        if(date == null){
+            return null;
+        }
+        String dateFull = date.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.FULL, FormatStyle.FULL));
+
+        return dateFull;
     }
 
 
-    public static String dataFormattata(ZonedDateTime oggi){
-        String formatDate = oggi.format(DateTimeFormatter.ofPattern("dd MMMM yyyy"));
 
-        return formatDate;
-    }
+
+
 }

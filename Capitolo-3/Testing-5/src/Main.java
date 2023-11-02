@@ -12,7 +12,12 @@ public class Main {
         System.out.println("stampaData: " + resultOperaz(oggi));
 
     }
+
     public static String resultOperaz(ZonedDateTime oggi){
+        if(oggi == null){
+            return null;
+        }
+
         oggi.plusYears(1);
         oggi.minusMonths(1);
         oggi.plusDays(7);

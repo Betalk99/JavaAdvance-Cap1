@@ -22,21 +22,33 @@ public class Main {
 
     }
     public static String ottieniAnno(ZonedDateTime oggi){
+        if(oggi == null){
+            return null;
+        }
         String yearData = String.valueOf(oggi.getYear());
 
         return yearData;
     }
     public static String ottieniMese(ZonedDateTime oggi){
+        if(oggi == null){
+            return null;
+        }
         String mouthData = String.valueOf(oggi.getMonth());
 
         return mouthData;
     }
     public static String ottieniGiornoMese(ZonedDateTime oggi){
+        if(oggi == null){
+            return null;
+        }
         String dayData = String.valueOf(oggi.getDayOfMonth());
 
         return dayData;
     }
     public static String ottieniGiornoSett(ZonedDateTime oggi){
+        if(oggi == null){
+            return null;
+        }
         String dayWeekData = String.valueOf(oggi.getDayOfWeek());
 
         return dayWeekData;

@@ -1,16 +1,16 @@
 public class Triangolo extends Forma{
-    private double base;
-    private double altezza;
+    private Double base;
+    private Double altezza;
     private TipoForma tipo;
 
     // Costruttore
-    public Triangolo(double base, double altezza, TipoForma tipo) {
+    public Triangolo(Double base, Double altezza, TipoForma tipo) {
         this.tipo = tipo;
         this.base = base;
         this.altezza = altezza;
     }
     @Override
-    public double calcolaArea(){
+    public Double calcolaArea(){
         return base*altezza / 2;
     }
 
