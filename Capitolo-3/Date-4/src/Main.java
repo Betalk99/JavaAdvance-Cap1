@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
 
         ZonedDateTime oggi = OffsetDateTime.parse("2023-03-01T13:00:00Z").atZoneSimilarLocal(ZoneId.of("Europe/Rome"));
-        System.out.println("Oggi: " + oggi);
+//        System.out.println("Oggi: " + oggi);
 
         oggi.plusYears(1);
         oggi.minusMonths(1);
