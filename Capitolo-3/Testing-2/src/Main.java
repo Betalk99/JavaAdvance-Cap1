@@ -10,7 +10,6 @@ public class Main {
         ZonedDateTime date = OffsetDateTime.parse("2002-03-01T13:00:00Z").atZoneSimilarLocal(ZoneId.of("Europe/Rome"));
         System.out.println("Data " + date);
 
-
         System.out.println("Date Short : " + dataShor(date));
 
         System.out.println("Date Medium : " + dataMed(date));

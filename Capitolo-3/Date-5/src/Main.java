@@ -13,7 +13,7 @@ public class Main {
         ZonedDateTime primaData = OffsetDateTime.parse("2023-03-01T13:00:00Z").atZoneSimilarLocal(ZoneId.of("Europe/Rome"));
         System.out.println("primaData : " + primaData);
 
-        ZonedDateTime secondaData = OffsetDateTime.parse("2024-03-01T13:00:00Z").atZoneSimilarLocal(ZoneId.of("Europe/Rome"));
+        ZonedDateTime secondaData = OffsetDateTime.parse("2023-03-01T13:00:00Z").atZoneSimilarLocal(ZoneId.of("Europe/Rome"));
         System.out.println("secondaData : " + secondaData);
 
 
@@ -32,6 +32,15 @@ public class Main {
         } else{
             System.out.println("Le due date non sono uguali alla data odierna");
         }
+
+
+
+
+
+
+
+
+
 
 
     }

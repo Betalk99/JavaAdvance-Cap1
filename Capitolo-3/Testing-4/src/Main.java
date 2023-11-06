@@ -10,12 +10,9 @@ public class Main {
 
         System.out.println("yearData: " + ottieniAnno(oggi));
 
-
         System.out.println("mouthData: " + ottieniMese(oggi));
 
-
         System.out.println("dayData: " + ottieniGiornoMese(oggi));
-
 
         System.out.println("dayWeekData: " + ottieniGiornoSett(oggi));
 

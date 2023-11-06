@@ -17,7 +17,6 @@ class MainTest {
         String result = testing.dataShor(date);
 
         assertEquals(exp, result, "risultato dovrebbe essere 01/03/02, 13:00");
-
     }
 
     @Test
