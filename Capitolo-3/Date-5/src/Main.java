@@ -17,12 +17,24 @@ public class Main {
         System.out.println("secondaData : " + secondaData);
 
 
-        if(primaData.isBefore(secondaData)){
-            System.out.println("La prima data è precedente alla seconda");
-        }
-        if(secondaData.isAfter(primaData)){
-            System.out.println("La seconda data è successiva alla prima");
-        }
+        System.out.println("La prima data è precedente alla seconda: " + isBef(primaData, secondaData));
+
+        System.out.println("La seconda data è successiva alla prima: " + isAft(primaData, secondaData));
+
+        isEqua(primaData, secondaData, oggi);
+
+
+    }
+
+    public static boolean isBef(ZonedDateTime primaData, ZonedDateTime secondaData){
+        return primaData.isBefore(secondaData);
+    }
+
+    public static boolean isAft(ZonedDateTime primaData, ZonedDateTime secondaData){
+        return primaData.isAfter(secondaData);
+    }
+
+    public static void isEqua(ZonedDateTime primaData, ZonedDateTime secondaData,ZonedDateTime oggi){
         if(primaData.isEqual(oggi) && secondaData.isEqual(oggi)){
             System.out.println("Le due date sono uguali ad ora");
         } else if (primaData.isEqual(oggi)) {
@@ -32,16 +44,8 @@ public class Main {
         } else{
             System.out.println("Le due date non sono uguali alla data odierna");
         }
-
-
-
-
-
-
-
-
-
-
-
     }
+
+
+
 }
