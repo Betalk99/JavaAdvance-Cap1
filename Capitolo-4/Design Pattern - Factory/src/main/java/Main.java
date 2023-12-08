@@ -1,0 +1,17 @@
+import java.util.Arrays;
+
+public class Main {
+    public static void main(String[] args) {
+
+        ShapeFactory shapeFactory = new ShapeFactory();
+
+        Shape shape1 = shapeFactory.getShape("cerchio");
+
+        shape1.draw();
+
+        Shape shape2 = shapeFactory.getShape("rettangolo");
+
+        shape2.draw();
+
+    }
+}
